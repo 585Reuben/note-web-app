@@ -53,19 +53,31 @@
 			<a href="./" class="logo me-auto"><img src="" alt=""></a>
 		
 			<nav id="navbar" class="navbar order-last order-lg-0">
+						
 				<ul>
-				 <!-- <li><a class="nav-link scrollto fw-bold" href="profile">Profile</a></li>
-						<li><a class="nav-link scrollto fw-bold" href="#documents">Documents</a></li>
-						<li><a class="nav-link scrollto fw-bold" href="payments">Payments</a></li>
-						<li><a class="nav-link scrollto fw-bold" href="courses">Courses</a></li>
-						<li><a class="nav-link scrollto fw-bold" href="results">Results</a></li>
-						<li><a class="nav-link scrollto fw-bold" href="logout">Logout</a></li> -->
-				<!-- <li><a class="nav-link scrollto fw-bold " href="./">Home</a></li>
-						<li><a class="nav-link scrollto fw-bold" href="about-us">About Us</a></li>
-						<li><a class="nav-link scrollto fw-bold" href="contact-us">Contact Us</a></li> -->
-						<li><a class="nav-link scrollto fw-bold" href="sign-up">Sign Up</a></li>
+
+					<?php 
+					if (!isset($_COOKIE['user_id'])  || in_array($page, $header_blacklist_arr) ){
+						echo '<li><a class="nav-link scrollto fw-bold" href="sign-up">Sign Up</a></li>
+						<li><a class="nav-link scrollto fw-bold" href="login">Login</a></li>';
+					}
+					
+					?>
+
+<?php 
+					if (isset($_COOKIE['user_id'])  && !in_array($page, $header_blacklist_arr) ){
+						echo '
+	
+					    <li><a class="nav-link scrollto fw-bold" href="logout">Logout</a></li>
+						<li><a class="nav-link scrollto fw-bold" href="notes">Notes</a></li>
+						<li><a class="nav-link scrollto fw-bold" href="profile">profile</a></li>';
+					}
+					
+					?>
+
 				
-						<li><a class="nav-link scrollto fw-bold" href="login">Login</a></li>
+					
+				
 				
 				</ul>
 				<i class="bi bi-list mobile-nav-toggle"></i>

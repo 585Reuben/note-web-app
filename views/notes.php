@@ -15,10 +15,9 @@
         <div class="row mt-5">
 
           <div class="col-md-6 mx-auto">
-            <h1>
             
-            </h1>
             <form style="margin-top:50px" action="" method="post" role="form" class="php-email-form">
+                  <h3> Add New Note</h3>
             <?php 
                 if ( isset( $msg ) )
                 {
@@ -28,7 +27,7 @@
               <div class="row">
          
                 <div class="col-md-12 mb-3 form-group mt-3">
-                  <label for="description">Note</label>
+                  <label for="description"></label>
                   <textarea placeholder="Enter Note" id="description"  class="form-control" name="description" rows="4" cols="50"></textarea>
                 </div>
               
@@ -68,9 +67,9 @@
               <th scope='row'>$sn</th>
               <td>$description</td>
               <td>
-              <a class='btn btn-primary' href='view_note?<?php echo $id ?>' target='_blank'> View</a>
-              <a class='btn btn-primary' href='edit_note?<?php echo $id ?>'> Edit</a>
-              <a class='btn btn-danger' href='delete?<?php echo $id ?>'> Delete</a>
+              <a class='btn btn-primary' href='view_note?id=$id' target=''> View</a>
+              <a class='btn btn-primary' href='edit_note?id=$id'> Edit</a>
+              <a class='btn btn-danger' href='delete?id=$id'> Delete</a>
                 
               </td>
             </tr>";

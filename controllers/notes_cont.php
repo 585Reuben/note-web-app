@@ -6,6 +6,7 @@
     #   Date modified: 20/05/2024 
 
    include_once('models/Note.php');
+   include_once('controllers/user_auth.php');
 	// Creating instance
 	$note = new  Note();
 	
