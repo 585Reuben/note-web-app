@@ -62,7 +62,7 @@
 			$res = $this->runQuery_2( $sql, $dt);
 			return $res ?? 0;
 		}
-		
+
 	}
 		
 ?>

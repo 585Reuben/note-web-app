@@ -67,9 +67,9 @@
               <th scope='row'>$sn</th>
               <td>$description</td>
               <td>
-              <a class='btn btn-primary' href='view_note?id=$id' target=''> View</a>
-              <a class='btn btn-primary' href='edit_note?id=$id'> Edit</a>
-              <a class='btn btn-danger' href='delete?id=$id'> Delete</a>
+              <a class='btn-sm btn btn-primary' href='view_note?id=$id' target=''> View</a>
+              <a class='btn-sm btn btn-primary' href='edit_note?id=$id'> Edit</a>
+              <a class='btn-sm btn btn-danger' href='delete?id=$id'> Delete</a>
                 
               </td>
             </tr>";
